@@ -13,6 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call(UserAdminSeeder::class);
+        $this->call(CompradorSeeder::class);
+        $this->call(VendedorSeeder::class);
+        $this->call(PropiedadSeeder::class);
+        $this->call(VendedorPropiedadSeeder::class);
+        $this->call(SolicitudVisitaSeeder::class);
+
+        $this->command->info('Dummy data seeded!');
     }
 }
